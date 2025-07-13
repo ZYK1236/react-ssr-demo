@@ -43,7 +43,7 @@ async function createServer() {
       // 3. 加载服务器入口。vite.ssrLoadModule 将自动转换
       //    你的 ESM 源码使之可以在 Node.js 中运行！无需打包
       //    并提供了一种高效的模块失效机制，类似于模块热替换（HMR）。
-      const { render } = await vite.ssrLoadModule('/src/entry-server.jsx')
+      const { render } = await vite.ssrLoadModule('/src/entry-server.tsx')
 
       // 4. 渲染应用的 HTML。这假设 entry-server.js 导出的 `render`
       //    函数调用了适当的 SSR 框架 API。
