@@ -12,21 +12,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['fsevents'], // 排除 fsevents 模块
   },
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: './index.html',
-        server: './server/index.js',
-      },
-      output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]'
-      }
-    }
-  },
-  ssr: {
-    format: 'cjs',
-  },
 })

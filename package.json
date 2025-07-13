@@ -4,11 +4,13 @@
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
+    "compression": "^1.8.0",
     "crypto": "^1.0.1",
     "crypto-es": "^2.1.0",
     "express": "^5.1.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sirv": "^3.0.1"
   },
   "devDependencies": {
     "@types/node": "^24.0.13",
@@ -18,9 +20,9 @@
     "vite": "^7.0.4"
   },
   "scripts": {
-    "dev": "node server/index.js",
-    "build": "vite build",
-    "preview": "node dist/server.js",
-    "serve": "NODE_ENV=production node dist/server.js"
+    "dev": "nodemon server/index.js",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
+    "serve": "nodemon server.js"
   }
 }

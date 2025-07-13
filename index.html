@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script>console.log("startTime:", performance.now())</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vite SSR React</title>
@@ -10,6 +11,7 @@
 <body>
   <div id="root"><!--ssr-outlet--></div>
   <script type="module" src="/src/entry-client.tsx"></script>
+  <script>console.log("endTime:", performance.now())</script>
 </body>
 
 </html>
